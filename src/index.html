@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Option Sport</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -17,31 +18,37 @@
             </ul>
         </nav>
     </header>
-    <section id="presentation">
-        <h1>Présentation du Projet</h1>
-        <p><!-- Description of the project --></p>
-    </section>
-    <section id="product">
-        <h1>Produit</h1>
-        <div class="product-gallery">
-            <img src="../assets/image1.jpg" alt="image 1">
-            <img src="../assets/image2.jpg" alt="image 2">
-            <img src="../assets/image3.jpg" alt="image 3">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <section id="presentation" class="swiper-slide">
+                <h1>Présentation du Projet</h1>
+                <p><!-- Description of the project --></p>
+            </section>
+            <section id="product" class="swiper-slide">
+                <h1>Produit</h1>
+                <div class="product-gallery">
+                    <img src="../assets/image1.jpg" alt="image 1">
+                    <img src="../assets/image2.jpg" alt="image 2">
+                    <img src="../assets/image3.jpg" alt="image 3">
+                </div>
+                <p><!-- Description of the product --></p>
+            </section>
+            <section id="contact" class="swiper-slide">
+                <h1>Nous Contacter</h1>
+                <form>
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
         </div>
-        <p><!-- Description of the product --></p>
-    </section>
-    <section id="contact">
-        <h1>Nous Contacter</h1>
-        <form>
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

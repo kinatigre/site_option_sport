@@ -1,43 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Showcase Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportyBag</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <h1>SportyBag</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><button onclick="scrollToSection('home')">Accueil</button></li>
+                    <li><button onclick="scrollToSection('product')">Produit</button></li>
+                    <li><button onclick="scrollToSection('contact')">Contact</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="home">
-        <h1>Welcome to Our Project</h1>
-        <p>Introduction to the project.</p>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Details about the team and mission.</p>
-    </section>
-    <section id="product">
-        <h2>Our Product</h2>
-        <p>Description and features of the product.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+
+    <main>
+        <section id="home" class="section home">
+            <div class="container">
+                <h2>Le Sac de Sport Ultime</h2>
+                <p>Découvrez notre sac de sport révolutionnaire, conçu pour les athlètes exigeants.</p>
+                <button onclick="scrollToSection('product')">Découvrir</button>
+                <button onclick="scrollToSection('contact')">Nous contacter</button>
+            </div>
+        </section>
+
+        <section id="product" class="section product">
+            <div class="container">
+                <h2>Notre Produit Phare</h2>
+                <p>Notre sac de sport premium combine fonctionnalité, durabilité et style.</p>
+                <button>En savoir plus</button>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p>Vous avez des questions ? Notre équipe est disponible pour vous aider.</p>
+                <form>
+                    <input type="text" placeholder="Votre nom" required />
+                    <input type="email" placeholder="Votre email" required />
+                    <textarea placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SportyBag. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
